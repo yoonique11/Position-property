@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+    <style>
+        body,html{
+            height: 100%;
+            margin:0;
+            padding:0;
+        }
+        body{
+            height: 400%;
+            background-color: red;
+        }
+        #boxOne{
+            height:300px;
+            width:300px;
+            background-color: yellow;
+            position:static; /*기본값.*/
+        }
+        #boxTwo{
+            height:300px;
+            width:100px;
+            background-color: green;
+            position:fixed; /*위치 고정*/
+            bottom:30px;
+            left:0;
+        }
+        #boxThree{
+            height:300px;
+            width:300px;
+            background-color: brown;
+            position: absolute;/*항상 위*/
+            bottom:40px;
+        }
+        
+        #boxThree-child{
+            height:20px;
+            width:20px;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxOne">
+        <div class="box-child"></div>
+    </div>
+    <div id="boxTwo">
+        <div class="box-child"></div>
+    </div>
+    <div id="boxThree">
+        <div id="boxThree-child"></div>
+    </div>
+
+</body>
+</html>
